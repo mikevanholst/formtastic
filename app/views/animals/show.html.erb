@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Animal', new_animal_path %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @animal.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @animal.category.name %>
+</p>
+
+<p>
+  <strong>Born on:</strong>
+  <%= @animal.born_on %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @animal.female ? 'Female' : 'Male' %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @animal.weight %>
+</p>
+<p>
+  <strong>Problems:</strong>
+  <%= @animal.problems.each do |problem|%>
+  <%= problem.name %> / 
+ <% end %>
+ 
+</p>
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'Back', animals_path %>

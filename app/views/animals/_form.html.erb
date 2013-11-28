@@ -1,0 +1,16 @@
+<%= semantic_form_for @animal do |f| %>
+<%= f.semantic_errors :state %> 
+  <%= f.inputs do %>
+    <%= f.input :name, hint: "if none, use owner's name" %>
+    <%= f.input :category%>
+    <%= f.input :born_on, start_year: 2001,
+     include_blank: false %>
+    <%= f.input :female, as: :radio, label: 'Gender', collection: [['Male', false], ['Female', true]] %>
+    <%= f.input :weight, label: 'Weight(kg)' %>
+    <%= f.input :problems, as: :check_boxes %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

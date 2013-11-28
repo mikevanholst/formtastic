@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  animal_id: 
+  problem_id: 
+
+two:
+  animal_id: 
+  problem_id: 
